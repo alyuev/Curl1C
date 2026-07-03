@@ -320,8 +320,8 @@ class CcURL: public CContextImpl<CcURL> {
     BL_FUNC(easy_cleanup, "ќчиститьѕараметры", 0);
     BL_FUNC(easy_setopt, "”становитьѕараметр", 2);
     BL_FUNC(easy_perform, "¬ыполнить", 0);
-    BL_FUNC(CompressBody, "CompressBody", 1);
-    BL_FUNC(CompressFile, "CompressFile", 3);
+    BL_FUNC(CompressBody, "—жать“ело", 1);
+    BL_FUNC(CompressFile, "—жать‘айл", 3);
 
     BL_FUNC(Debug, "ќтладка", 1);
     BL_FUNC(Trace, "“рассировка", 1) {
