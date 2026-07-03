@@ -5,6 +5,7 @@
 #pragma once
 
 #include "Common.h"
+#include <string>
 //#include "../curl/include/curl/curl.h"
 //#include "../curl/lib/curl_base64.h"
 //#include "base64/base64.h"
@@ -221,6 +222,7 @@ class CcURL: public CContextImpl<CcURL> {
         pCurlMime = new CCurlMime(m_curl,m_mime);
 
         isMultipart = FALSE;
+        m_bodyCompression = 0;
 
         curl_easy_setopt(m_curl, CURLOPT_SSL_VERIFYPEER, 0L);
         curl_easy_setopt(m_curl, CURLOPT_SSL_VERIFYHOST, 0L);
@@ -289,7 +291,7 @@ class CcURL: public CContextImpl<CcURL> {
     BL_BEGIN_CONTEXT("cURL1C", "Карлик");
 
     BL_FUNC(Version, "Версия", 0) {
-        retVal = 16;
+        retVal = 17;
         return TRUE;
     }
 
@@ -318,6 +320,8 @@ class CcURL: public CContextImpl<CcURL> {
     BL_FUNC(easy_cleanup, "ОчиститьПараметры", 0);
     BL_FUNC(easy_setopt, "УстановитьПараметр", 2);
     BL_FUNC(easy_perform, "Выполнить", 0);
+    BL_FUNC(CompressBody, "CompressBody", 1);
+    BL_FUNC(CompressFile, "CompressFile", 3);
 
     BL_FUNC(Debug, "Отладка", 1);
     BL_FUNC(Trace, "Трассировка", 1) {
@@ -469,6 +473,9 @@ class CcURL: public CContextImpl<CcURL> {
 
     struct curl_slist *headers;
     struct curl_slist *recipients;
+
+    int m_bodyCompression;
+    std::string m_compressedBody;
 
 };
 

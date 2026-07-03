@@ -9,6 +9,7 @@
 //#include "utex.h"
 
 #include "Context.h"
+#include "../zlib-1.3/zlib.h"
 //#include "../curl/include/curl/curl.h"
 #include "Common.h"
 
@@ -254,6 +255,102 @@ static size_t read_callback(char *dest, size_t size, size_t nmemb, void *userp) 
     return 0; /* no more data left to deliver */
 }
 
+// ---- gzip/deflate helpers (zlib) --------------------------------------
+// windowBits: 31 = gzip (RFC1952), 15 = zlib/deflate (RFC1950).
+static bool zlib_compress_mem(const unsigned char* in, unsigned long inlen,
+                              std::string& out, int windowBits, int level) {
+    z_stream zs;
+    memset(&zs, 0, sizeof(zs));
+    if (deflateInit2(&zs, level, Z_DEFLATED, windowBits, 8, Z_DEFAULT_STRATEGY) != Z_OK)
+        return false;
+    uLong bound = deflateBound(&zs, inlen);
+    out.resize(bound);
+    zs.next_in  = (Bytef*)in;
+    zs.avail_in = inlen;
+    zs.next_out = (Bytef*)(bound ? &out[0] : (char*)0);
+    zs.avail_out = bound;
+    int r = deflate(&zs, Z_FINISH);
+    if (r != Z_STREAM_END) { deflateEnd(&zs); return false; }
+    out.resize(zs.total_out);
+    deflateEnd(&zs);
+    return true;
+}
+
+static bool zlib_compress_file(const char* inPath, const char* outPath,
+                               int windowBits, int level) {
+    FILE* fi = fopen(inPath, "rb");
+    if (!fi) return false;
+    FILE* fo = fopen(outPath, "wb");
+    if (!fo) { fclose(fi); return false; }
+    z_stream zs;
+    memset(&zs, 0, sizeof(zs));
+    if (deflateInit2(&zs, level, Z_DEFLATED, windowBits, 8, Z_DEFAULT_STRATEGY) != Z_OK) {
+        fclose(fi); fclose(fo); return false;
+    }
+    const size_t CH = 1 << 16;
+    std::vector<unsigned char> inbuf(CH), outbuf(CH);
+    bool ok = true;
+    int flush;
+    do {
+        zs.avail_in = (uInt)fread(&inbuf[0], 1, CH, fi);
+        if (ferror(fi)) { ok = false; break; }
+        flush = feof(fi) ? Z_FINISH : Z_NO_FLUSH;
+        zs.next_in = &inbuf[0];
+        do {
+            zs.avail_out = (uInt)CH;
+            zs.next_out  = &outbuf[0];
+            int r = deflate(&zs, flush);
+            if (r == Z_STREAM_ERROR) { ok = false; break; }
+            size_t have = CH - zs.avail_out;
+            if (fwrite(&outbuf[0], 1, have, fo) != have || ferror(fo)) { ok = false; break; }
+        } while (zs.avail_out == 0);
+        if (!ok) break;
+    } while (flush != Z_FINISH);
+    deflateEnd(&zs);
+    fclose(fi);
+    fclose(fo);
+    return ok;
+}
+
+// Parse a compression format string. mode: 0=none, 1=gzip, 2=deflate.
+static bool curl1c_parse_format(const char* fmt, int* windowBits, int* mode) {
+    CString f(fmt);
+    f.MakeLower();
+    f.TrimLeft();
+    f.TrimRight();
+    if (f.IsEmpty() || f == "gzip") { *windowBits = 31; *mode = 1; return true; }
+    if (f == "deflate")            { *windowBits = 15; *mode = 2; return true; }
+    if (f == "none" || f == "off" || f == "0") { *windowBits = 0; *mode = 0; return true; }
+    return false;
+}
+
+// CompressBody("gzip"|"deflate"|"none") - enable transparent body compression.
+int CcURL::CompressBody(CValue& retVal, CValue** ppParams) {
+    const char* fmt = ppParams[0]->GetString();
+    int wbits = 0, mode = 0;
+    if (!curl1c_parse_format(fmt, &wbits, &mode)) {
+        RuntimeError("CompressBody: unknown format (use gzip, deflate or none)");
+        return FALSE;
+    }
+    m_bodyCompression = mode;
+    return TRUE;
+}
+
+// CompressFile(inPath, outPath, format) - gzip/deflate a file on disk.
+int CcURL::CompressFile(CValue& retVal, CValue** ppParams) {
+    const char* inPath  = ppParams[0]->GetString();
+    const char* outPath = ppParams[1]->GetString();
+    const char* fmt     = ppParams[2]->GetString();
+    int wbits = 31, mode = 1;
+    if (!curl1c_parse_format(fmt, &wbits, &mode) || mode == 0)
+        wbits = 31; // default to gzip for empty/none/unknown
+    if (!zlib_compress_file(inPath, outPath, wbits, -1)) {
+        RuntimeError("CompressFile: compression failed");
+        return FALSE;
+    }
+    return TRUE;
+}
+
 int CcURL::easy_perform(CValue& retVal, CValue** ppParams) {
     TraceLog("CcURL::easy_perform starting");
 
@@ -272,6 +369,7 @@ int CcURL::easy_perform(CValue& retVal, CValue** ppParams) {
     struct stat file_info;
 
     struct WriteThis wt;
+    struct curl_slist* ce_headers = NULL;
 
     DWORD t_start;
 
@@ -301,9 +399,28 @@ int CcURL::easy_perform(CValue& retVal, CValue** ppParams) {
             TraceLog("CcURL::easy_perform ANSItoUTF8 done");
 
             if (isPosting == FALSE) {
-                curl_easy_setopt(m_curl, CURLOPT_POSTFIELDS, PostFildsData);
-                //DoMsgLine("send data [%s]",mmNone,PostFildsData);
-                curl_easy_setopt(m_curl, CURLOPT_POSTFIELDSIZE, PostFildsData.GetLength());
+                if (m_bodyCompression != 0) {
+                    int wbits = (m_bodyCompression == 2) ? 15 : 31;
+                    if (!zlib_compress_mem((const unsigned char*)(LPCTSTR)PostFildsData,
+                                           (unsigned long)PostFildsData.GetLength(),
+                                           m_compressedBody, wbits, -1)) {
+                        RuntimeError("CompressBody: compression failed");
+                        return FALSE;
+                    }
+                    curl_easy_setopt(m_curl, CURLOPT_POSTFIELDSIZE, (long)m_compressedBody.size());
+                    curl_easy_setopt(m_curl, CURLOPT_POSTFIELDS, m_compressedBody.data());
+                    {
+                        struct curl_slist* it = headers;
+                        for (; it; it = it->next)
+                            ce_headers = curl_slist_append(ce_headers, it->data);
+                        ce_headers = curl_slist_append(ce_headers,
+                            (m_bodyCompression == 2) ? "Content-Encoding: deflate" : "Content-Encoding: gzip");
+                        curl_easy_setopt(m_curl, CURLOPT_HTTPHEADER, ce_headers);
+                    }
+                } else {
+                    curl_easy_setopt(m_curl, CURLOPT_POSTFIELDS, PostFildsData);
+                    curl_easy_setopt(m_curl, CURLOPT_POSTFIELDSIZE, PostFildsData.GetLength());
+                }
             } else {
                 wt.readptr = PostFildsData;
                 wt.sizeleft = PostFildsData.GetLength();
@@ -364,6 +481,11 @@ int CcURL::easy_perform(CValue& retVal, CValue** ppParams) {
     //t_start = GetTickCount();
     TraceLog("CcURL::easy_perform Начало выполнения запроса");
     res = curl_easy_perform(m_curl);
+    if (ce_headers) {
+        curl_easy_setopt(m_curl, CURLOPT_HTTPHEADER, headers);
+        curl_slist_free_all(ce_headers);
+        ce_headers = NULL;
+    }
     TraceLog("CcURL::easy_perform Запрос выполнен");
     //DoMsgLine("curl_easy_perform %d ms",mmNone,(GetTickCount()-t_start));
 
