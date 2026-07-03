@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="tests" />
+		<Option pch_mode="2" />
+		<Option compiler="microsoft_visual_c_60" />
+		<Build>
+			<Target title="Win32 Release">
+				<Option output="simple" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release" />
+				<Option type="1" />
+				<Option compiler="microsoft_visual_c_60" />
+				<Compiler>
+					<Add option="/W3" />
+					<Add option="/GX" />
+					<Add option="/O2" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBSSH2_WIN32" />
+					<Add option="/D_CONSOLE" />
+					<Add option="/D_MBCS" />
+					<Add option="/YX" />
+					<Add option="/FD" />
+					<Add option="/MD" />
+					<Add directory="../include" />
+					<Add directory="../win32" />
+				</Compiler>
+				<Linker>
+					<Add option="/subsystem:console" />
+					<Add option="/machine:I386" />
+					<Add option='/out:&quot;simple.exe&quot;' />
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+					<Add library="libeay32" />
+					<Add library="ssleay32" />
+					<Add library="ws2_32" />
+					<Add library="zlib" />
+					<Add library="libssh2" />
+					<Add directory="Release" />
+				</Linker>
+			</Target>
+			<Target title="Win32 Debug">
+				<Option output="simple" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug" />
+				<Option type="1" />
+				<Option compiler="microsoft_visual_c_60" />
+				<Compiler>
+					<Add option="/W3" />
+					<Add option="/Gm" />
+					<Add option="/GX" />
+					<Add option="/ZI" />
+					<Add option="/Od" />
+					<Add option="/DWIN32" />
+					<Add option="/D_DEBUG" />
+					<Add option="/DLIBSSH2_WIN32" />
+					<Add option="/D_CONSOLE" />
+					<Add option="/D_MBCS" />
+					<Add option="/YX" />
+					<Add option="/FD" />
+					<Add option="/GZ" />
+					<Add option="/MDd" />
+					<Add directory="../include" />
+					<Add directory="../win32" />
+				</Compiler>
+				<Linker>
+					<Add option="/subsystem:console" />
+					<Add option="/debug" />
+					<Add option="/machine:I386" />
+					<Add option="/pdbtype:sept" />
+					<Add option='/out:&quot;simple.exe&quot;' />
+					<Add library="kernel32" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+					<Add library="winspool" />
+					<Add library="comdlg32" />
+					<Add library="advapi32" />
+					<Add library="shell32" />
+					<Add library="ole32" />
+					<Add library="oleaut32" />
+					<Add library="uuid" />
+					<Add library="odbc32" />
+					<Add library="odbccp32" />
+					<Add library="libeay32" />
+					<Add library="ssleay32" />
+					<Add library="ws2_32" />
+					<Add library="zlib" />
+					<Add library="libssh2d" />
+					<Add directory="Debug" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../tests/simple.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<fortran_project />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

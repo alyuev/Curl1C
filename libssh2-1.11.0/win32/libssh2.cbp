@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libssh2" />
+		<Option pch_mode="2" />
+		<Option compiler="microsoft_visual_c_98" />
+		<Build>
+			<Target title="ICL9 OpenSSL">
+				<Option platforms="Windows;" />
+				<Option output="../../Release/icl9/libssh2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../build/libssh2" />
+				<Option type="2" />
+				<Option compiler="icc" />
+				<Option createDefFile="1" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Option projectIncludeDirsRelation="2" />
+				<Option projectLibDirsRelation="2" />
+				<Compiler>
+					<Add option="/Os" />
+					<Add option="-W0" />
+					<Add option="/Oi" />
+					<Add option="/Oy" />
+					<Add option="/GF" />
+					<Add option="/Y-" />
+					<Add option="/MD" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBSSH2_WIN32" />
+					<Add option="/DLIBSSH2_OPENSSL" />
+					<Add option="/DLIBSSH2_HAVE_ZLIB" />
+					<Add option="/DLIBSSH2_WINCNG" />
+					<Add option="/D_MBCS" />
+					<Add option="/D_LIB" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/atl" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/crt" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/mfc" />
+					<Add directory="../win32" />
+					<Add directory="../include" />
+					<Add directory="../../zlib-1.3" />
+				</Compiler>
+				<Linker>
+					<Add directory="../../openssl/build/Win32/VC6/LIB Release" />
+				</Linker>
+			</Target>
+			<Target title="ICL10 OpenSSL">
+				<Option platforms="Windows;" />
+				<Option output="../../Release/icl10/libssh2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../build/libssh" />
+				<Option type="2" />
+				<Option compiler="intel_cc_compiler_10" />
+				<Option createDefFile="1" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Option projectIncludeDirsRelation="2" />
+				<Option projectLibDirsRelation="2" />
+				<Compiler>
+					<Add option="/fast" />
+					<Add option="-W0" />
+					<Add option="/MD" />
+					<Add option="/FD" />
+					<Add option="/Oy" />
+					<Add option="/Gy" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBSSH2_WIN32" />
+					<Add option="/DLIBSSH2_OPENSSL" />
+					<Add option="/D_MBCS" />
+					<Add option="/D_LIB" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/atl" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/crt" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/mfc" />
+					<Add directory="../win32" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add directory="../../openssl/build/Win32/VC6/LIB Release" />
+				</Linker>
+			</Target>
+			<Target title="ICL12 OpenSSL">
+				<Option platforms="Windows;" />
+				<Option output="../../Release/icl12/libssh2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../build/libssh" />
+				<Option type="2" />
+				<Option compiler="intel_cc_compiler_12" />
+				<Option createDefFile="1" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Option projectIncludeDirsRelation="2" />
+				<Option projectLibDirsRelation="2" />
+				<Compiler>
+					<Add option="/fast" />
+					<Add option="-W0" />
+					<Add option="/YX" />
+					<Add option="/MD" />
+					<Add option="/FD" />
+					<Add option="/Oy" />
+					<Add option="/Gy" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBSSH2_WIN32" />
+					<Add option="/DLIBSSH2_OPENSSL" />
+					<Add option="/D_MBCS" />
+					<Add option="/D_LIB" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/atl" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/crt" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/mfc" />
+					<Add directory="../win32" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add directory="../../openssl/build/Win32/VC6/LIB Release" />
+				</Linker>
+			</Target>
+			<Target title="ICL14 OpenSSL">
+				<Option platforms="Windows;" />
+				<Option output="../../Release/icl14/libssh2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../build/libssh" />
+				<Option type="2" />
+				<Option compiler="intel_cc_compiler_14" />
+				<Option createDefFile="1" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Option projectIncludeDirsRelation="2" />
+				<Option projectLibDirsRelation="2" />
+				<Compiler>
+					<Add option="/fast" />
+					<Add option="-W0" />
+					<Add option="/MD" />
+					<Add option="/FD" />
+					<Add option="/Oy" />
+					<Add option="/Gy" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBSSH2_WIN32" />
+					<Add option="/DLIBSSH2_OPENSSL" />
+					<Add option="/D_MBCS" />
+					<Add option="/D_LIB" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/atl" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/crt" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/mfc" />
+					<Add directory="../win32" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add directory="../../openssl/build/Win32/VC6/LIB Release" />
+				</Linker>
+			</Target>
+			<Target title="Win32 OpenSSL LIB Release">
+				<Option platforms="Windows;" />
+				<Option output="../../build/libssh2_1" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../build/libssh" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_98" />
+				<Option createDefFile="1" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Option projectIncludeDirsRelation="2" />
+				<Option projectLibDirsRelation="2" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/G5" />
+					<Add option="/Os" />
+					<Add option="/YX" />
+					<Add option="/FD" />
+					<Add option="/Oy" />
+					<Add option="/Gy" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBSSH2_WIN32" />
+					<Add option="/DLIBSSH2_OPENSSL" />
+					<Add option="/D_MBCS" />
+					<Add option="/D_LIB" />
+					<Add directory="../../../Compillers/PSDK2003/Include" />
+					<Add directory="../win32" />
+					<Add directory="../include" />
+					<Add directory="../../openssl/inc32" />
+				</Compiler>
+				<Linker>
+					<Add directory="../../openssl/build/Win32/VC6/LIB Release" />
+				</Linker>
+			</Target>
+			<Target title="Win32 OpenSSL LIB 1.1">
+				<Option output="../../build/libssh2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../build/libssh" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_98" />
+				<Option createDefFile="1" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Option projectIncludeDirsRelation="2" />
+				<Option projectLibDirsRelation="2" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/G5" />
+					<Add option="/Os" />
+					<Add option="/YX" />
+					<Add option="/FD" />
+					<Add option="/Oy" />
+					<Add option="/Gy" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DLIBSSH2_WIN32" />
+					<Add option="/DLIBSSH2_OPENSSL" />
+					<Add option="/D_MBCS" />
+					<Add option="/D_LIB" />
+					<Add directory="../../../Compillers/PSDK2003/Include" />
+					<Add directory="../../openssl-1.1.1u/include" />
+					<Add directory="../include" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="/Os" />
+			<Add directory="../../openssl-3.2.1/include" />
+		</Compiler>
+		<Linker>
+			<Add directory="../../openssl/lib" />
+		</Linker>
+		<Unit filename="../include/libssh2.h" />
+		<Unit filename="../include/libssh2_publickey.h" />
+		<Unit filename="../include/libssh2_sftp.h" />
+		<Unit filename="../src/agent.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/agent_win.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/bcrypt_pbkdf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/blowfish.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/channel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/channel.h" />
+		<Unit filename="../src/comp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/comp.h" />
+		<Unit filename="../src/crypt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/crypto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/crypto.h" />
+		<Unit filename="../src/global.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/hostkey.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/keepalive.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/kex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/knownhost.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/libgcrypt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/libgcrypt.h" />
+		<Unit filename="../src/libssh2.rc">
+			<Option compilerVar="WINDRES" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="../src/libssh2_priv.h" />
+		<Unit filename="../src/libssh2_setup.h" />
+		<Unit filename="../src/mac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/mac.h" />
+		<Unit filename="../src/mbedtls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/mbedtls.h" />
+		<Unit filename="../src/misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/misc.h" />
+		<Unit filename="../src/openssl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/openssl.h" />
+		<Unit filename="../src/os400qc3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/os400qc3.h" />
+		<Unit filename="../src/packet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/packet.h" />
+		<Unit filename="../src/pem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/publickey.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/scp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/session.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/session.h" />
+		<Unit filename="../src/sftp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/sftp.h" />
+		<Unit filename="../src/transport.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/transport.h" />
+		<Unit filename="../src/userauth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/userauth.h" />
+		<Unit filename="../src/userauth_kbd_packet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/userauth_kbd_packet.h" />
+		<Unit filename="../src/version.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/wincng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../src/wincng.h" />
+		<Unit filename="libssh2_config.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

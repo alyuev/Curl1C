@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="libcurl 8.3.0" />
+		<Option pch_mode="2" />
+		<Option compiler="microsoft_visual_c_60" />
+		<Build>
+			<Target title="ICL 9">
+				<Option platforms="Windows;" />
+				<Option output="../../Release/icl9/libcurl" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../Build/libcurl" />
+				<Option type="2" />
+				<Option compiler="intel_cc_compiler_14" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="/Os" />
+					<Add option="-W0" />
+					<Add option="/MD" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DBUILDING_LIBCURL" />
+					<Add option="/DCURL_STATICLIB" />
+					<Add option="/DUSE_OPENSSL" />
+					<Add option="/DUSE_LIBSSH2" />
+					<Add option="/DHAVE_LIBSSH2_H" />
+					<Add option="/DUSE_SYNC_DNS" />
+					<Add option="/DHAVE_GZIP" />
+					<Add option="/DHAVE_LIBZ" />
+					<Add option="/DHAVE_ZLIB_H" />
+					<Add option="/DHAVE_BROTLI" />
+					<Add option="/DCURL_DISABLE_LDAP" />
+					<Add option="/D_MSC_VER=1200" />
+					<Add option="/DOPENSSL_API_COMPAT=0x30000000L" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../include" />
+					<Add directory="../../openssl-3.2.1/include" />
+					<Add directory="../../libssh2-1.11.0/include" />
+					<Add directory="../../zlib-1.3" />
+					<Add directory="../../brotli-1.1.0/c/include" />
+					<Add directory="../lib" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../../../../../Compillers/PSDK2003/Include" />
+				</ResourceCompiler>
+			</Target>
+			<Target title="ICL 10">
+				<Option platforms="Windows;" />
+				<Option output="../../../../../Release/icl10/libcurl" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../../../../Release/icl10" />
+				<Option type="2" />
+				<Option compiler="icc" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="/fast" />
+					<Add option="-W0" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DBUILDING_LIBCURL" />
+					<Add option="/DCURL_STATICLIB" />
+					<Add option="/DUSE_OPENSSL" />
+					<Add option="/DUSE_LIBSSH2" />
+					<Add option="/DHAVE_LIBSSH2_H" />
+					<Add option="/DUSE_SYNC_DNS" />
+					<Add option="/DHAVE_GZIP" />
+					<Add option="/DHAVE_LIBZ" />
+					<Add option="/DHAVE_ZLIB_H" />
+					<Add option="/DHAVE_BROTLI" />
+					<Add option="/DOPENSSL_API_COMPAT=0x10000000L" />
+					<Add directory="../../../../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../../../../include" />
+					<Add directory="../../../../lib" />
+					<Add directory="../../../../../openssl-openssl-3.1.2/include" />
+					<Add directory="../../../../../libssh2-1.11.0/include" />
+					<Add directory="../../../../../zlib-1.2.11" />
+					<Add directory="../../../../../brotli-1.0.9/c/include" />
+					<Add directory="../../../../../nghttp2/nghttp2-1.12.0/lib/includes" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../../../../../Compillers/PSDK2003/Include" />
+				</ResourceCompiler>
+			</Target>
+			<Target title="ICL 12">
+				<Option platforms="Windows;" />
+				<Option output="../../../../../Release/icl12/libcurl" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../../../../Release/icl12" />
+				<Option type="2" />
+				<Option compiler="icc" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="/fast" />
+					<Add option="-W0" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DBUILDING_LIBCURL" />
+					<Add option="/DCURL_STATICLIB" />
+					<Add option="/DUSE_OPENSSL" />
+					<Add option="/DUSE_LIBSSH2" />
+					<Add option="/DHAVE_LIBSSH2_H" />
+					<Add option="/DUSE_SYNC_DNS" />
+					<Add option="/DHAVE_GZIP" />
+					<Add option="/DHAVE_LIBZ" />
+					<Add option="/DHAVE_ZLIB_H" />
+					<Add option="/DHAVE_BROTLI" />
+					<Add option="/DOPENSSL_API_COMPAT=0x10000000L" />
+					<Add directory="../../../../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../../../../include" />
+					<Add directory="../../../../lib" />
+					<Add directory="../../../../../openssl-openssl-3.1.2/include" />
+					<Add directory="../../../../../libssh2-1.11.0/include" />
+					<Add directory="../../../../../zlib-1.2.11" />
+					<Add directory="../../../../../brotli-1.0.9/c/include" />
+					<Add directory="../../../../../nghttp2/nghttp2-1.12.0/lib/includes" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../../../../../Compillers/PSDK2003/Include" />
+				</ResourceCompiler>
+			</Target>
+			<Target title="ICL 14">
+				<Option platforms="Windows;" />
+				<Option output="../../../../../Release/icl14/libcurl" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../../../../Release/icl14" />
+				<Option type="2" />
+				<Option compiler="icc" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="/fast" />
+					<Add option="-W0" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DBUILDING_LIBCURL" />
+					<Add option="/DCURL_STATICLIB" />
+					<Add option="/DUSE_OPENSSL" />
+					<Add option="/DUSE_LIBSSH2" />
+					<Add option="/DHAVE_LIBSSH2_H" />
+					<Add option="/DUSE_SYNC_DNS" />
+					<Add option="/DHAVE_GZIP" />
+					<Add option="/DHAVE_LIBZ" />
+					<Add option="/DHAVE_ZLIB_H" />
+					<Add option="/DHAVE_BROTLI" />
+					<Add option="/DOPENSSL_API_COMPAT=0x10000000L" />
+					<Add directory="../../../../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../../../../include" />
+					<Add directory="../../../../lib" />
+					<Add directory="../../../../../openssl-openssl-3.1.2/include" />
+					<Add directory="../../../../../libssh2-1.11.0/include" />
+					<Add directory="../../../../../zlib-1.2.11" />
+					<Add directory="../../../../../brotli-1.0.9/c/include" />
+					<Add directory="../../../../../nghttp2/nghttp2-1.12.0/lib/includes" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../../../../../Compillers/PSDK2003/Include" />
+				</ResourceCompiler>
+			</Target>
+			<Target title="ICL 9 3.1.3">
+				<Option platforms="Windows;" />
+				<Option output="../../Release/icl9/libcurl" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../Build/libcurl" />
+				<Option type="2" />
+				<Option compiler="intel_cc_compiler_10" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="/O2" />
+					<Add option="-W0" />
+					<Add option="/MD" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DBUILDING_LIBCURL" />
+					<Add option="/DCURL_STATICLIB" />
+					<Add option="/DUSE_OPENSSL" />
+					<Add option="/DUSE_LIBSSH2" />
+					<Add option="/DHAVE_LIBSSH2_H" />
+					<Add option="/DUSE_SYNC_DNS" />
+					<Add option="/DHAVE_GZIP" />
+					<Add option="/DHAVE_LIBZ" />
+					<Add option="/DHAVE_ZLIB_H" />
+					<Add option="/DHAVE_BROTLI" />
+					<Add option="/DOPENSSL_API_COMPAT=0x10000000L" />
+					<Add option="/DCURL_DISABLE_LDAP" />
+					<Add option="/D_MSC_VER=1200" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../include" />
+					<Add directory="../../openssl-3.1.3/include" />
+					<Add directory="../../libssh2-1.11.0/include" />
+					<Add directory="../../zlib-1.2.11" />
+					<Add directory="../../brotli-1.0.9/c/include" />
+					<Add directory="../lib" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../../../../../Compillers/PSDK2003/Include" />
+				</ResourceCompiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="/DHAVE_LIBZ" />
+			<Add directory="../../../../../../Compillers/PSDK2003/Include" />
+		</Compiler>
+		<Unit filename="../lib/altsvc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/altsvc.h" />
+		<Unit filename="../lib/amigaos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/amigaos.h" />
+		<Unit filename="../lib/arpa_telnet.h" />
+		<Unit filename="../lib/asyn-ares.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/asyn-thread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/asyn.h" />
+		<Unit filename="../lib/base64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/bufq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/bufq.h" />
+		<Unit filename="../lib/bufref.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/bufref.h" />
+		<Unit filename="../lib/c-hyper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/c-hyper.h" />
+		<Unit filename="../lib/cf-h1-proxy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/cf-h1-proxy.h" />
+		<Unit filename="../lib/cf-h2-proxy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/cf-h2-proxy.h" />
+		<Unit filename="../lib/cf-haproxy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/cf-haproxy.h" />
+		<Unit filename="../lib/cf-https-connect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/cf-https-connect.h" />
+		<Unit filename="../lib/cf-socket.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/cf-socket.h" />
+		<Unit filename="../lib/cfilters.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/cfilters.h" />
+		<Unit filename="../lib/config-amigaos.h" />
+		<Unit filename="../lib/config-dos.h" />
+		<Unit filename="../lib/config-mac.h" />
+		<Unit filename="../lib/config-os400.h" />
+		<Unit filename="../lib/config-plan9.h" />
+		<Unit filename="../lib/config-riscos.h" />
+		<Unit filename="../lib/config-win32.h" />
+		<Unit filename="../lib/config-win32ce.h" />
+		<Unit filename="../lib/conncache.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/conncache.h" />
+		<Unit filename="../lib/connect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/connect.h" />
+		<Unit filename="../lib/content_encoding.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/content_encoding.h" />
+		<Unit filename="../lib/cookie.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/cookie.h" />
+		<Unit filename="../lib/curl_addrinfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_addrinfo.h" />
+		<Unit filename="../lib/curl_base64.h" />
+		<Unit filename="../lib/curl_ctype.h" />
+		<Unit filename="../lib/curl_des.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_des.h" />
+		<Unit filename="../lib/curl_endian.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_endian.h" />
+		<Unit filename="../lib/curl_fnmatch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_fnmatch.h" />
+		<Unit filename="../lib/curl_get_line.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_get_line.h" />
+		<Unit filename="../lib/curl_gethostname.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_gethostname.h" />
+		<Unit filename="../lib/curl_gssapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_gssapi.h" />
+		<Unit filename="../lib/curl_hmac.h" />
+		<Unit filename="../lib/curl_krb5.h" />
+		<Unit filename="../lib/curl_ldap.h" />
+		<Unit filename="../lib/curl_md4.h" />
+		<Unit filename="../lib/curl_md5.h" />
+		<Unit filename="../lib/curl_memory.h" />
+		<Unit filename="../lib/curl_memrchr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_memrchr.h" />
+		<Unit filename="../lib/curl_multibyte.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_multibyte.h" />
+		<Unit filename="../lib/curl_ntlm_core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_ntlm_core.h" />
+		<Unit filename="../lib/curl_ntlm_wb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_ntlm_wb.h" />
+		<Unit filename="../lib/curl_path.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_path.h" />
+		<Unit filename="../lib/curl_printf.h" />
+		<Unit filename="../lib/curl_range.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_range.h" />
+		<Unit filename="../lib/curl_rtmp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_rtmp.h" />
+		<Unit filename="../lib/curl_sasl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_sasl.h" />
+		<Unit filename="../lib/curl_setup.h" />
+		<Unit filename="../lib/curl_setup_once.h" />
+		<Unit filename="../lib/curl_sha256.h" />
+		<Unit filename="../lib/curl_sspi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_sspi.h" />
+		<Unit filename="../lib/curl_threads.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_threads.h" />
+		<Unit filename="../lib/curl_trc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/curl_trc.h" />
+		<Unit filename="../lib/curlx.h" />
+		<Unit filename="../lib/dict.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/dict.h" />
+		<Unit filename="../lib/doh.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/doh.h" />
+		<Unit filename="../lib/dynbuf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/dynbuf.h" />
+		<Unit filename="../lib/dynhds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/dynhds.h" />
+		<Unit filename="../lib/easy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/easy_lock.h" />
+		<Unit filename="../lib/easygetopt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/easyif.h" />
+		<Unit filename="../lib/easyoptions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/easyoptions.h" />
+		<Unit filename="../lib/escape.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/escape.h" />
+		<Unit filename="../lib/file.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/file.h" />
+		<Unit filename="../lib/fileinfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/fileinfo.h" />
+		<Unit filename="../lib/fopen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/fopen.h" />
+		<Unit filename="../lib/formdata.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/formdata.h" />
+		<Unit filename="../lib/ftp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/ftp.h" />
+		<Unit filename="../lib/ftplistparser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/ftplistparser.h" />
+		<Unit filename="../lib/functypes.h" />
+		<Unit filename="../lib/getenv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/getinfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/getinfo.h" />
+		<Unit filename="../lib/gopher.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/gopher.h" />
+		<Unit filename="../lib/hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/hash.h" />
+		<Unit filename="../lib/headers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/headers.h" />
+		<Unit filename="../lib/hmac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/hostasyn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/hostip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/hostip.h" />
+		<Unit filename="../lib/hostip4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/hostip6.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/hostsyn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/hsts.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/hsts.h" />
+		<Unit filename="../lib/http.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/http.h" />
+		<Unit filename="../lib/http1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/http1.h" />
+		<Unit filename="../lib/http2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/http2.h" />
+		<Unit filename="../lib/http_aws_sigv4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/http_aws_sigv4.h" />
+		<Unit filename="../lib/http_chunks.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/http_chunks.h" />
+		<Unit filename="../lib/http_digest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/http_digest.h" />
+		<Unit filename="../lib/http_negotiate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/http_negotiate.h" />
+		<Unit filename="../lib/http_ntlm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/http_ntlm.h" />
+		<Unit filename="../lib/http_proxy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/http_proxy.h" />
+		<Unit filename="../lib/idn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/idn.h" />
+		<Unit filename="../lib/if2ip.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/if2ip.h" />
+		<Unit filename="../lib/imap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/imap.h" />
+		<Unit filename="../lib/inet_ntop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/inet_ntop.h" />
+		<Unit filename="../lib/inet_pton.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/inet_pton.h" />
+		<Unit filename="../lib/krb5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/ldap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/libcurl.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="../lib/llist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/llist.h" />
+		<Unit filename="../lib/macos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/macos.h" />
+		<Unit filename="../lib/md4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/md5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/memdebug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/memdebug.h" />
+		<Unit filename="../lib/mime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/mime.h" />
+		<Unit filename="../lib/mprintf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/mqtt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/mqtt.h" />
+		<Unit filename="../lib/multi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/multihandle.h" />
+		<Unit filename="../lib/multiif.h" />
+		<Unit filename="../lib/netrc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/netrc.h" />
+		<Unit filename="../lib/nonblock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/nonblock.h" />
+		<Unit filename="../lib/noproxy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/noproxy.h" />
+		<Unit filename="../lib/openldap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/parsedate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/parsedate.h" />
+		<Unit filename="../lib/pingpong.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/pingpong.h" />
+		<Unit filename="../lib/pop3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/pop3.h" />
+		<Unit filename="../lib/progress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/progress.h" />
+		<Unit filename="../lib/psl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/psl.h" />
+		<Unit filename="../lib/rand.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/rand.h" />
+		<Unit filename="../lib/rename.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/rename.h" />
+		<Unit filename="../lib/rtsp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/rtsp.h" />
+		<Unit filename="../lib/select.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/select.h" />
+		<Unit filename="../lib/sendf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/sendf.h" />
+		<Unit filename="../lib/setopt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/setopt.h" />
+		<Unit filename="../lib/setup-os400.h" />
+		<Unit filename="../lib/setup-vms.h" />
+		<Unit filename="../lib/setup-win32.h" />
+		<Unit filename="../lib/sha256.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/share.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/share.h" />
+		<Unit filename="../lib/sigpipe.h" />
+		<Unit filename="../lib/slist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/slist.h" />
+		<Unit filename="../lib/smb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/smb.h" />
+		<Unit filename="../lib/smtp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/smtp.h" />
+		<Unit filename="../lib/sockaddr.h" />
+		<Unit filename="../lib/socketpair.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/socketpair.h" />
+		<Unit filename="../lib/socks.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/socks.h" />
+		<Unit filename="../lib/socks_gssapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/socks_sspi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/speedcheck.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/speedcheck.h" />
+		<Unit filename="../lib/splay.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/splay.h" />
+		<Unit filename="../lib/strcase.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/strcase.h" />
+		<Unit filename="../lib/strdup.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/strdup.h" />
+		<Unit filename="../lib/strerror.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/strerror.h" />
+		<Unit filename="../lib/strtok.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/strtok.h" />
+		<Unit filename="../lib/strtoofft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/strtoofft.h" />
+		<Unit filename="../lib/system_win32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/system_win32.h" />
+		<Unit filename="../lib/telnet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/telnet.h" />
+		<Unit filename="../lib/tftp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/tftp.h" />
+		<Unit filename="../lib/timediff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/timediff.h" />
+		<Unit filename="../lib/timeval.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/timeval.h" />
+		<Unit filename="../lib/transfer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/transfer.h" />
+		<Unit filename="../lib/url.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/url.h" />
+		<Unit filename="../lib/urlapi-int.h" />
+		<Unit filename="../lib/urlapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/urldata.h" />
+		<Unit filename="../lib/vauth/cleartext.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/cram.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/digest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/digest.h" />
+		<Unit filename="../lib/vauth/digest_sspi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/gsasl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/krb5_gssapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/krb5_sspi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/ntlm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/ntlm.h" />
+		<Unit filename="../lib/vauth/ntlm_sspi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/oauth2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/spnego_gssapi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/spnego_sspi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/vauth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vauth/vauth.h" />
+		<Unit filename="../lib/version.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/version_win32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/version_win32.h" />
+		<Unit filename="../lib/vquic/curl_msh3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vquic/curl_msh3.h" />
+		<Unit filename="../lib/vquic/curl_ngtcp2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vquic/curl_ngtcp2.h" />
+		<Unit filename="../lib/vquic/curl_quiche.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vquic/curl_quiche.h" />
+		<Unit filename="../lib/vquic/vquic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vquic/vquic.h" />
+		<Unit filename="../lib/vquic/vquic_int.h" />
+		<Unit filename="../lib/vssh/libssh.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vssh/libssh2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vssh/ssh.h" />
+		<Unit filename="../lib/vssh/wolfssh.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/bearssl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/bearssl.h" />
+		<Unit filename="../lib/vtls/gtls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/gtls.h" />
+		<Unit filename="../lib/vtls/hostcheck.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/hostcheck.h" />
+		<Unit filename="../lib/vtls/keylog.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/keylog.h" />
+		<Unit filename="../lib/vtls/mbedtls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/mbedtls.h" />
+		<Unit filename="../lib/vtls/mbedtls_threadlock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/mbedtls_threadlock.h" />
+		<Unit filename="../lib/vtls/openssl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/openssl.h" />
+		<Unit filename="../lib/vtls/rustls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/rustls.h" />
+		<Unit filename="../lib/vtls/schannel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/schannel.h" />
+		<Unit filename="../lib/vtls/schannel_int.h" />
+		<Unit filename="../lib/vtls/schannel_verify.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/sectransp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/sectransp.h" />
+		<Unit filename="../lib/vtls/vtls.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/vtls.h" />
+		<Unit filename="../lib/vtls/vtls_int.h" />
+		<Unit filename="../lib/vtls/wolfssl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/wolfssl.h" />
+		<Unit filename="../lib/vtls/x509asn1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/vtls/x509asn1.h" />
+		<Unit filename="../lib/warnless.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/warnless.h" />
+		<Unit filename="../lib/ws.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../lib/ws.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

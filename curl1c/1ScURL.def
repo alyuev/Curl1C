@@ -1,0 +1,6 @@
+; 1ScURL.def : Declares the module parameters for the DLL.
+
+LIBRARY      "1ScURL"
+DESCRIPTION  '1ScURL Windows Dynamic Link Library'
+
+EXPORTS

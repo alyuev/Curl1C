@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Карлик15" />
+		<Option platforms="Windows;" />
+		<Option pch_mode="2" />
+		<Option compiler="microsoft_visual_c_60" />
+		<Build>
+			<Target title="OpenSSL 1.1.1">
+				<Option platforms="Windows;" />
+				<Option output="../Release/curl1c" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../Build/curl1c" />
+				<Option type="3" />
+				<Option compiler="microsoft_visual_c_98" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Option projectIncludeDirsRelation="2" />
+				<Option projectLibDirsRelation="2" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/O1" />
+					<Add option="-W0" />
+					<Add option="/GD" />
+					<Add option="-GX" />
+					<Add option="/Oy" />
+					<Add option="/Gy" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_WINDOWS" />
+					<Add option="/D_WINDLL" />
+					<Add option="/D_AFXDLL" />
+					<Add option="/D_MBCS" />
+					<Add option="/D_AFXEXT" />
+					<Add option="/DUSE_SYNC_DNS" />
+					<Add option="/DHAVE_GZIP" />
+					<Add option="/DHAVE_LIBZ" />
+					<Add option="/DHAVE_ZLIB_H" />
+					<Add option="/DHAVE_BROTLI" />
+					<Add option="/D_WSPIAPI_COUNTOF" />
+					<Add directory="../../Compillers/PSDK2003/Include" />
+					<Add directory="../../Compillers/PSDK2003/Include/atl" />
+					<Add directory="../../Compillers/PSDK2003/Include/mfc" />
+					<Add directory="../../Compillers/PSDK2003/Include/crt" />
+					<Add directory="../curl-8.6.0/include/curl" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../../VC6/VC98/Include" />
+					<Add directory="../../../VC6/VC98/ATL/Include" />
+					<Add directory="../../../VC6/VC98/MFC/Include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="/NODEFAULTLIB:LIBCMT" />
+					<Add option="/OPT:REF,ICF,NOWIN98" />
+					<Add option="/DLL" />
+					<Add option="/INCREMENTAL:NO" />
+					<Add library="libcurl" />
+					<Add library="zlib" />
+					<Add library="brotli" />
+					<Add library="libssh2" />
+					<Add library="libcrypto" />
+					<Add library="libssl" />
+					<Add library="WS2_32" />
+					<Add library="Crypt32" />
+					<Add directory="../../../Compillers/PSDK2003/Lib" />
+					<Add directory="../../../Compillers/Intel11/lib/ia32" />
+					<Add directory="../../../Compillers/Intel9/Lib" />
+					<Add directory="../Release/icl9" />
+					<Add directory="../../../Compillers/MSVC98/MFC/Lib" />
+				</Linker>
+			</Target>
+			<Target title="OpenSSL 3.1.3">
+				<Option platforms="Windows;" />
+				<Option output="../Release/curl1c" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../Build/curl1c" />
+				<Option type="3" />
+				<Option compiler="microsoft_visual_c_98" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Option projectIncludeDirsRelation="2" />
+				<Option projectLibDirsRelation="2" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/G3" />
+					<Add option="/O1" />
+					<Add option="-W0" />
+					<Add option="/GD" />
+					<Add option="-GX" />
+					<Add option="/Oy" />
+					<Add option="/Gy" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_WINDOWS" />
+					<Add option="/D_WINDLL" />
+					<Add option="/D_AFXDLL" />
+					<Add option="/D_MBCS" />
+					<Add option="/D_AFXEXT" />
+					<Add option="/DUSE_SYNC_DNS" />
+					<Add option="/DHAVE_GZIP" />
+					<Add option="/DHAVE_LIBZ" />
+					<Add option="/DHAVE_ZLIB_H" />
+					<Add option="/DHAVE_BROTLI" />
+					<Add option="/D_WSPIAPI_COUNTOF" />
+					<Add directory="../../Compillers/PSDK2003/Include" />
+					<Add directory="../../Compillers/PSDK2003/Include/atl" />
+					<Add directory="../../Compillers/PSDK2003/Include/mfc" />
+					<Add directory="../../Compillers/PSDK2003/Include/crt" />
+					<Add directory="../curl-8.3.0/include/curl" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../../VC6/VC98/Include" />
+					<Add directory="../../../VC6/VC98/ATL/Include" />
+					<Add directory="../../../VC6/VC98/MFC/Include" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="/NODEFAULTLIB:LIBCMT" />
+					<Add library="libcurl" />
+					<Add library="zlib" />
+					<Add library="brotli" />
+					<Add library="libssh2" />
+					<Add library="libcrypto" />
+					<Add library="libssl" />
+					<Add library="WS2_32" />
+					<Add library="Crypt32" />
+					<Add library="MSVCRT" />
+					<Add directory="../../../Compillers/PSDK2003/Lib" />
+					<Add directory="../../../Compillers/Intel11/lib/ia32" />
+					<Add directory="../../../Compillers/Intel9/Lib" />
+					<Add directory="../Release/icl9" />
+					<Add directory="../../../Compillers/MSVC98/MFC/Lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="/DBUILDING_LIBCURL" />
+			<Add option="/DCURL_STATICLIB" />
+			<Add option="/DUSE_OPENSSL" />
+		</Compiler>
+		<Linker>
+			<Add directory="../build" />
+		</Linker>
+		<Unit filename="../_1Common/contextimpl.hpp" />
+		<Unit filename="1ScURL.cpp" />
+		<Unit filename="1ScURL.def" />
+		<Unit filename="1ScURL.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="Common.cpp" />
+		<Unit filename="Common.h" />
+		<Unit filename="Context.cpp" />
+		<Unit filename="Context.h" />
+		<Unit filename="Resource.h" />
+		<Unit filename="StdAfx.cpp" />
+		<Unit filename="StdAfx.h" />
+		<Unit filename="res/1ScURL.rc2" />
+		<Unit filename="version.h" />
+		<Extensions>
+			<AutoVersioning>
+				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
+				<Settings autoincrement="1" date_declarations="1" use_define="0" update_manifest="1" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
+				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
+			</AutoVersioning>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project output_language="" />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

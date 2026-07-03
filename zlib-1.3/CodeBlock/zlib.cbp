@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="zlib" />
+		<Option pch_mode="2" />
+		<Option compiler="microsoft_visual_c_60" />
+		<Build>
+			<Target title="ICL 9">
+				<Option platforms="Windows;" />
+				<Option output="../../Release/icl9/zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../../Build/zlib" />
+				<Option type="2" />
+				<Option compiler="icc" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="/GR-" />
+					<Add option="/Os" />
+					<Add option="-W0" />
+					<Add option="/MD" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DZLIB_WINAPI" />
+					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
+					<Add option="/D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="/D_CRT_NONSTDC_NO_WARNINGS" />
+					<Add option="/DZLIB_DLL" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/atl" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/crt" />
+					<Add directory="../../../../Compillers/PSDK2003/Include/mfc" />
+					<Add directory="../../zlib-1.2.11" />
+				</Compiler>
+				<Linker>
+					<Add option="/MACHINE:X86" />
+					<Add option="/NODEFAULTLIB" />
+				</Linker>
+			</Target>
+			<Target title="ICL 10">
+				<Option platforms="Windows;" />
+				<Option output="../../../Release/icl10/zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output=".build" />
+				<Option type="2" />
+				<Option compiler="intel_cc_compiler_10" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="/fast" />
+					<Add option="-W0" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
+					<Add option="/D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="/D_CRT_NONSTDC_NO_WARNINGS" />
+					<Add option="/DZLIB_WINAPI" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+				</Compiler>
+			</Target>
+			<Target title="ICL 12">
+				<Option platforms="Windows;" />
+				<Option output="../../../Release/icl12/zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output=".build" />
+				<Option type="2" />
+				<Option compiler="intel_cc_compiler_12" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="/fast" />
+					<Add option="-W0" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
+					<Add option="/D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="/D_CRT_NONSTDC_NO_WARNINGS" />
+					<Add option="/DZLIB_WINAPI" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+				</Compiler>
+			</Target>
+			<Target title="ICL 14">
+				<Option platforms="Windows;" />
+				<Option output="../../../Release/icl14/zlib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output=".build" />
+				<Option type="2" />
+				<Option compiler="intel_cc_compiler_14" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="2" />
+				<Compiler>
+					<Add option="/fast" />
+					<Add option="-W0" />
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
+					<Add option="/D_CRT_SECURE_NO_DEPRECATE" />
+					<Add option="/D_CRT_NONSTDC_NO_WARNINGS" />
+					<Add option="/DZLIB_WINAPI" />
+					<Add directory="../../../../Compillers/PSDK2003/Include" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../../../../PSDK2003/Include" />
+		</Compiler>
+		<Unit filename="../adler32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../compress.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../crc32.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../deflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gzclose.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gzlib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gzread.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gzwrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../infback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../inffast.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../inflate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../inftrees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../trees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../uncompr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../win32/zlib.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="../zutil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
